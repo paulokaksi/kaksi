@@ -1,2 +1,0 @@
-# kaksi
-kaksi Theme
