@@ -2,7 +2,7 @@
 
 /**
  *
- * Enqueue scripts and styles.
+ * Enqueue scripts and styles
  */
 function kaksi_editor_styles()
 {
