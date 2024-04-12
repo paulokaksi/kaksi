@@ -29,5 +29,5 @@ jobs:
           remote-host: "34.175.178.71"
           remote-port: 30115
           remote-user: "tmept"
-          remote-password: "psOD4LdOj5dqyMH"
+          remote-password: ${{ secrets.ftp_password }}
           remote-path: "/www/tmept_673/public/wp-content/themes/kaksi"
