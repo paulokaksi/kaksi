@@ -31,4 +31,3 @@ jobs:
           remote-user: "tmept"
           remote-password: "psOD4LdOj5dqyMH"
           remote-path: "/www/tmept_673/public/wp-content/themes/kaksi"
-          sync: "full"
