@@ -4,18 +4,10 @@ on:
   push:
     branches:
       - main
-  # Enables manually triggering of Workflow with file synchronization option
-  workflow_dispatch:
-    inputs:
-      sync:
-        description: "File synchronization"
-        required: true
-        default: "delta"
-
 jobs:
   deploy-master:
-    name: "master branch"
-    if: ${{ github.ref == 'refs/heads/master' }}
+    name: "main branch"
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     timeout-minutes: 29
     steps:
