@@ -10,7 +10,7 @@ on:
       sync:
         description: "File synchronization"
         required: true
-        default: "full"
+        default: "delta"
 jobs:
   deploy-master:
     name: "main branch"
@@ -31,3 +31,4 @@ jobs:
           remote-user: "tmept"
           remote-password: "psOD4LdOj5dqyMH"
           remote-path: "/public/wp-content/themes/kaksi"
+          sync: "full"
