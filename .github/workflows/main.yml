@@ -22,5 +22,5 @@ jobs:
           remote-host: "34.175.178.71"
           remote-port: 30115
           remote-user: "tmept"
-          ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          remote-password: "psOD4LdOj5dqyMH"
           remote-path: "/wp-content/themes/kaksi"
