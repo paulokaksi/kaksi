@@ -23,4 +23,4 @@ jobs:
           remote-port: 30115
           remote-user: "tmept"
           remote-password: "psOD4LdOj5dqyMH"
-          remote-path: "/wp-content/themes/kaksi"
+          remote-path: "/public/wp-content/themes/kaksi"
