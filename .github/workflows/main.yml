@@ -14,4 +14,5 @@ jobs:
         target-server: 34.175.178.71
         remote-user: tmept
         private-ssh-key: ${{ secrets.SSH_KEY }}
+        ssh-port: 30115
         destination-path: ~/public/wp-content/themes/kaksi/
