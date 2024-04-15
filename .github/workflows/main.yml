@@ -12,7 +12,7 @@ on:
         required: true
         default: "delta"
 jobs:
-  deploy-master:
+  deploy-main:
     name: "main branch"
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
@@ -22,7 +22,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: "Deploy"
+      - name: "Deploy to Kinsta staging"
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "sftp"
+          remote-host: "34.175.178.71"
+          remote-port: 44569
+          remote-user: "tmept"
+          remote-password: ${{ secrets.ftp_password }}
+          remote-path: "/www/tmept_673/public/wp-content/themes/kaksi"
+          sync: "full"
+      - name: "Deploy to Kinsta production"
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: "sftp"
@@ -31,4 +41,4 @@ jobs:
           remote-user: "tmept"
           remote-password: ${{ secrets.ftp_password }}
           remote-path: "/www/tmept_673/public/wp-content/themes/kaksi"
-          sync: "delta"
+          sync: "full"    
